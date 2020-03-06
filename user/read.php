@@ -1,7 +1,7 @@
 <?php
 
 include_once '../config/database.php';
-include_once './users.php';
+include_once '../objects/users.php';
 $database = new Database();
 $db = $database->getConnection();
 //Opna Klassan

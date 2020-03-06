@@ -34,4 +34,6 @@ SELECT * FROM users;
 INSERT INTO  `users` 
 VALUES(1,"Gunnar Helgason", "GH", "Password1234",CURRENT_TIMESTAMP);
 
+INSERT INTO  `tasks` 
+VALUES(1,"Clean Table", "Clean the kitchen table", CURRENT_TIMESTAMP, 1);
     

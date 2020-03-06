@@ -18,6 +18,7 @@ if($num>0){
   
         $user_item=array(
             "id" => $id,
+            "name" => $name,
             "username" => $username,
         );
   

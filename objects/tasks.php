@@ -16,6 +16,7 @@ function read(){
 
       $query = " SELECT 
       u1.name as user_name, 
+      u1.id as user_id,
     t.id, t.title, t.description, t.datetime, t.active 
        FROM " . $this->table_name . " as t
         LEFT JOIN users_tasks as u ON t.id = u.task_id

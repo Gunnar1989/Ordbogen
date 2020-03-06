@@ -17,6 +17,7 @@ if($num>0){
         extract($row);
   
         $task_item=array(
+            "user_name" => $user_name,
             "id" => $id,
             "title" => $title,
             "description" => $description,

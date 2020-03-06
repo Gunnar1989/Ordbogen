@@ -4,7 +4,7 @@ class Tasks{
     private $conn;
     private $table_name = "tasks";
     public $id;
-    public $name;
+    public $title;
     public $description;
     public $datetime;
     public $active;
@@ -13,11 +13,13 @@ class Tasks{
     }
 
 function read(){
-    
-      $query = "SELECT
-               id, title, description, datetime, active
-            FROM
-                " . $this->table_name;
+
+      $query = " SELECT 
+      u1.name as user_name, 
+    t.id, t.title, t.description, t.datetime, t.active 
+       FROM " . $this->table_name . " as t
+        LEFT JOIN users_tasks as u ON t.id = u.task_id
+        LEFT JOIN users as u1 ON u.user_id = u1.id";
 
     $stmt = $this->conn->prepare($query);
     $stmt->execute();
@@ -69,6 +71,34 @@ function readOne(){
     $this->description = $row['description'];
     $this->active = $row['active'];
 
+}
+function update(){
+      $query = "UPDATE
+                " . $this->table_name . "
+            SET
+                title = :title,
+                active = :active,
+                description = :description
+            WHERE
+                id = :id";
+  
+    $stmt = $this->conn->prepare($query);
+  
+    $this->title=htmlspecialchars(strip_tags($this->title));
+    $this->active=htmlspecialchars(strip_tags($this->active));
+    $this->description=htmlspecialchars(strip_tags($this->description));
+    $this->id=htmlspecialchars(strip_tags($this->id));
+  
+    $stmt->bindParam(':title', $this->title);
+    $stmt->bindParam(':active', $this->active);
+    $stmt->bindParam(':description', $this->description);
+    $stmt->bindParam(':id', $this->id);
+  
+    if($stmt->execute()){
+        return true;
+    }
+  
+    return false;
 }
 }
 

@@ -44,7 +44,7 @@ VALUES(1,"Gunnar Helgason", "GH", "Password1234",CURRENT_TIMESTAMP);
 INSERT INTO  `tasks` 
 VALUES(1,"Clean Table", "Clean the kitchen table", CURRENT_TIMESTAMP, 1);
 
-SELECT u1.name as user_name,  t.id, t.title, t.description, t.datetime, t.active FROM tasks as t 
+SELECT u1.name as user_name,u1.id as user_id,  t.id, t.title, t.description, t.datetime, t.active FROM tasks as t 
 LEFT JOIN users_tasks as u ON t.id = u.task_id
 LEFT JOIN users as u1 ON u.user_id = u1.id;
 

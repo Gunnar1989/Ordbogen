@@ -34,9 +34,9 @@ export default function User({ modalState, setModalState, id }) {
         <section className="modal-card-body">
           <div className="content">
             <div className="field-label is-pulled-left is-normal">
-              <label className="label">Class room Name:</label>
+              <label className="label">Name:</label>
             </div>
-            <div className="label-body"></div>
+            <div className="label-body"> {selectedUser.name}</div>
           </div>
         </section>
         <footer className="modal-card-foot">

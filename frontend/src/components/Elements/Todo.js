@@ -28,15 +28,15 @@ export default function Todo({ todoModalState, setToDoModalState, todoId }) {
       <div className="modal-card">
         <header className="modal-card-head has-background-primary has-text-centered">
           <p className="modal-card-title has-text-white-ter">
-            {selectedUser.name}
+            {selectedUser.title}
           </p>
         </header>
         <section className="modal-card-body">
           <div className="content">
             <div className="field-label is-pulled-left is-normal">
-              <label className="label">Class room Name:</label>
+              <label className="label">Description:</label>
             </div>
-            <div className="label-body"></div>
+            <div className="label-body">{selectedUser.description}</div>
           </div>
         </section>
         <footer className="modal-card-foot">

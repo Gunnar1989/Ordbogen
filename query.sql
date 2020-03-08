@@ -2,6 +2,9 @@ CREATE DATABASE todoapp;
 
 use todoapp;
 
+CREATE USER 'ordbog'@'localhost' IDENTIFIED BY 'Monika96';
+GRANT ALL PRIVILEGES ON * . * TO 'ordbog'@'localhost';
+
 CREATE TABLE IF NOT EXISTS `users` (
   `id`  INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,

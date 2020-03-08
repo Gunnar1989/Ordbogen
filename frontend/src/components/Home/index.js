@@ -7,9 +7,9 @@ export default function index() {
   return (
     <div>
       <Hero></Hero>
-      <section class="section">
-        <div class="container">
-          <div class="columns">
+      <section className="section">
+        <div className="container">
+          <div className="columns">
             <Sidebar></Sidebar>
             <Main></Main>
           </div>

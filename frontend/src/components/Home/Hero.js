@@ -2,24 +2,21 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section class="hero is-primary">
-      <div class="hero-body">
-        <div class="columns">
-          <div class="column is-12">
-            <div class="container content">
-              <i class="is-large fab fa-discord"></i>
-              <i class="is-large fas fa-code"></i>
-              <h1 class="title">Gunnar Helgason</h1>
-              <h3 class="subtitle">Ordbog To-Do</h3>
+    <section className="hero is-primary">
+      <div className="hero-body">
+        <div className="columns">
+          <div className="column is-12">
+            <div className="container content">
+              <i className="is-large fab fa-discord"></i>
+              <i className="is-large fas fa-code"></i>
+              <h1 className="title">Gunnar Helgason</h1>
+              <h3 className="subtitle">Ordbog To-Do</h3>
               <a
                 href="https://github.com/Gunnar1989/Ordbogen"
                 target="_blank"
-                class="button is-primary is-large"
+                className="button  is-medium"
               >
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-                <span>Github</span>
+                <span>Code</span>
               </a>
             </div>
           </div>
